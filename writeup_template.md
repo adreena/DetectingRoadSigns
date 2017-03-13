@@ -9,7 +9,7 @@ The goals / steps of this project are the following:
 * Step 3: building a multilayer neural network model to predict signs 
 * Step 4: optimizing model's cost and tuning weights/biases
 * Step 5: evaluating the model based on validation set
-* Step 6: downloading and testing a few extra samples from the web (with precision and recall of each sign)
+* Step 6: downloading and testing a few extra samples from the web (analyzing them by precision and recall of each sign)
 * Step 7: evaluating test set
 * Step 8: visualizing feature map with sample image from test set
 
@@ -20,13 +20,13 @@ Dataset in this expermient consists of 32x32 images with 3 channels and 43 label
  * Validation data size: 4410
  * Testing data size: 12630
  
-I visualized training-set based on the frequency of signs to get a better undesrtanding of how well model can be trained based on the variations and if the number of images (for each sign) in the data has a direct impact on the accuracy of model to predict labels for the input images
+I visualized training-set based on the frequency of signs to get a better undesrtanding of how well model can be trained based on the variations and if the number of images (for each sign) in the data has a direct impact on the accuracy of model to predict labels.
 
 <img src="./examples/training_freq.png" width="750" height="280"/>
 
 As shown above, the number of images for signs [0-Speed limit (20km/h)] , [19-Dangerous curve to the left] or [37-Go straight or left] is relatively smaller than signs with frequecy higher than 1800 such as [1-Speed limit (30km/h)]. Depending on image qualities model might not perform well on detecting signs with fewer trainign samples in comparison with those signs with 1800 samples.
 
-Picking random images from training set also shows not all the images have good qualities and dark shades orbad sun exposure can introduce 
+Picking random images from training set also shows not all the images have good qualities. Dark shades or bad sun exposure can introduce 
 noise into the model. One sample is shown below
 
 <img src="./examples/bad_image.png" width="150" height="150"/>
