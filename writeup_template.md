@@ -1,32 +1,28 @@
 #**Traffic Sign Recognition** 
 
-##Writeup Template
-
-###You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
----
-
 **Build a Traffic Sign Recognition Project**
 
 The goals / steps of this project are the following:
-* Load the data set (see below for links to the project data set)
-* Explore, summarize and visualize the data set
-* Design, train and test a model architecture
-* Use the model to make predictions on new images
-* Analyze the softmax probabilities of the new images
-* Summarize the results with a written report
 
+* Step 1: loading and visualizing images and labels for training/validation/testing
+* Step 2: preprocessing images
+* Step 3: building a multilayer neural network model to predict signs 
+* Step 4: optimizing model's cost and tuning weights/biases
+* Step 5: evaluating the model based on validation set
+* Step 6: downloading and testing a few extra samples from the web (with precision and recall of each sign)
+* Step 7: evaluating test set
+* Step 8: visualizing feature map with sample image from test set
 
-[//]: # (Image References)
+### Dataset Exploration
 
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+Dataset in this expermient consists of 32x32 images with 3 channels and 43 labels of traffic signs. 
+ * Training data size: 34799
+ * Validation data size: 4410
+ * Testing data size: 12630
+ 
+I visualized training-set based on the frequency of signs to get a better undesrtanding of how well model can be trained based on the variations and if the number of images (for each sign) in the data has a direct impact on the accuracy of model to predict labels for the input images
+[image1]: ./examples/training_freq.png "Frequency of signs "
+
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
