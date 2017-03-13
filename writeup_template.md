@@ -21,8 +21,15 @@ Dataset in this expermient consists of 32x32 images with 3 channels and 43 label
  * Testing data size: 12630
  
 I visualized training-set based on the frequency of signs to get a better undesrtanding of how well model can be trained based on the variations and if the number of images (for each sign) in the data has a direct impact on the accuracy of model to predict labels for the input images
-[image1]: ./examples/training_freq.png "Frequency of signs "
 
+<img src="./examples/training_freq.png" width="750" height="280"/>
+
+As shown above, the number of images for signs [0-Speed limit (20km/h)] , [19-Dangerous curve to the left] or [37-Go straight or left] is relatively smaller than signs with frequecy higher than 1800 such as [1-Speed limit (30km/h)]. Depending on image qualities model might not perform well on detecting signs with fewer trainign samples in comparison with those signs with 1800 samples.
+
+Picking random images from training set also shows not all the images have good qualities and dark shades orbad sun exposure can introduce 
+noise into the model. One sample is shown below
+
+<img src="./examples/bad_image.png" width="20" height="20"/>
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
