@@ -13,31 +13,46 @@ The goals / steps of this project are the following:
 * Step 7: evaluating test set
 * Step 8: visualizing feature map with sample image from test set
 
+* goals: achieving a high accuracy on test images 
+
 ### Dataset Exploration
 
 Dataset in this expermient consists of 32x32 images with 3 channels and 43 labels of traffic signs. 
  * Training data size: 34799
  * Validation data size: 4410
  * Testing data size: 12630
+ * Note: after adding noise to training set , its size increases to 35299
  
 I visualized training-set based on the frequency of signs to get a better undesrtanding of how well model can be trained based on the variations and if the number of images (for each sign) in the data has a direct impact on the accuracy of model to predict labels.
 
 <img src="./examples/training_freq.png" width="750" height="280"/>
 
-As shown above, the number of images for signs [0-Speed limit (20km/h)] , [19-Dangerous curve to the left] or [37-Go straight or left] is relatively smaller than signs with frequecy higher than 1800 such as [1-Speed limit (30km/h)]. Depending on image qualities model might not perform well on detecting signs with fewer trainign samples in comparison with those signs with 1800 samples.
+As shown above, the number of images for some of the signs such as [0-Speed limit (20km/h)] , [19-Dangerous curve to the left] or [37-Go straight or left] is relatively smaller than the other signs with frequecy higher than 1200 such as [1-Speed limit (30km/h)]. 
+Depending on image qualities model might not perform well enough on detecting signs with fewer training samples in comparison to the ones with 1200 samples.
 
-Picking random images from training set also shows not all the images have good qualities. Dark shades or bad sun exposure can introduce 
-noise into the model. One sample is shown below
+Picking random images from training set also shows that not all images have good qualities. Dark shades or bad sun exposure can make signs look similar to some of the other signs which can also introduce noise into the model. One sample is shown below
 
 <img src="./examples/bad_image.png" width="150" height="150"/>
 
 ## Design and Test a Model Architecture
 
-Althoug colors play an important role to show the type of traffic signs, there are also variety of reasons which may affect these colors and how they're reflected to drivers, such as signs in dark shadows of trees/rocks/mountains or sun angles thorughout the day. In order to train the nework independenlty from the color-factor and to reduce complexity, I performed a preprocessing step on images to convert them to grayscale for cutting down 3-channels to only 1-channel and also normalize images with mean 0 and ((1)) << , 
+Althoug colors play an important role to show the type of traffic signs, there are also variety of reasons which might affect these colors and how they're reflected to drivers; Such as signs in dark shadows of trees/mountains or being exposed different sun angles thorughout the day. In order to train the nework independenlty from the color-factor and to reduce complexity, I performed a preprocessing step on images to convert them to grayscale and cutting down 3-channels to only 1-channel, I also normalized images with mean 0 and ((1)) << , to get a better distribution.()<-  
+Preprocessing on 2 images:
+<img src="./examples/bad_image.png" width="150" height="150"/> 
+<img src="./examples/bad_image.png" width="150" height="150"/>
+<img src="./examples/bad_image.png" width="150" height="150"/> 
+<img src="./examples/bad_image.png" width="150" height="150"/>
+<img src="./examples/bad_image.png" width="150" height="150"/>
+<img src="./examples/bad_image.png" width="150" height="150"/>
 
-(2image sample)
+After preprocessing step, images are ready to train the model, but in order to make model even more independent from the data, I added noise to 500 of images and appended them to the training set, which in result increase the size of training set to 35299. 
+Here are 2 examples of extra images with added noise:
+<img src="./examples/bad_image.png" width="150" height="150"/> 
+<img src="./examples/bad_image.png" width="150" height="150"/>
+<img src="./examples/bad_image.png" width="150" height="150"/> 
+<img src="./examples/bad_image.png" width="150" height="150"/>
 
-After preprocessing step, images are ready to train the model. Network used for this exercise consists of 6 layers similar to LeNet structure, input, 4 hidden layers and output:
+Network used for this exercise consists of 6 layers similar to LeNet structure, input, 4 hidden layers and output:
 
   * input layer: 32x32x1 images connect with 5x5x1x6 weights to 1st hidden layer
   * conv1 layer: is convolutional layer with filter size of 5x5x1, depth of 6 and stride of 1 and. After passing thorugh filters biases are added and data gets actiavted with relu to ((3)). Pooling method used in this layer is max_pool with kernel size of 2 to reduce the size of output to 10x10x6. 
