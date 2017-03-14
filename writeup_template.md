@@ -47,6 +47,7 @@ Preprocessing on 1 images:
 After preprocessing step, images are ready to train the model, but in order to make model even more independent from the data, I added noise to 500 random images and appended them to the training set, which in result increase the size of training set to 35299 which improved my model accuracy on 7 web-sample images
 
 Here are 2 examples of extra images with added noise:
+
 | original                                                   | noise                                                       |
 | ---------------------------------------------------------- | ----------------------------------------------------------- |
 | <img src="./examples/noise1.png" width="150" height="150"/>|<img src="./examples/noise1_1.png" width="150" height="150"/>|
