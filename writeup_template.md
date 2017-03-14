@@ -51,7 +51,7 @@ Here are 2 examples of extra images with added noise:
 | original                                                   | noise                                                       |
 | ---------------------------------------------------------- | ----------------------------------------------------------- |
 | <img src="./examples/noise1.png" width="150" height="150"/>|<img src="./examples/noise1_1.png" width="150" height="150"/>|
-| <img src="./examples/noise2.png" width="150" height="150"/>|<img src="./examples/noise2_1.png" width="150" height="150"/>|
+| <img src="./examples/noise2.png" width="150" height="150"/>|<img src="./examples/noise2_2.png" width="150" height="150"/>|
 
 Network used for this exercise consists of 6 layers similar to LeNet structure, input, 4 hidden layers and output:
 
@@ -122,3 +122,7 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
 | -------------------------------------------------------------|:-----------------------------------------------------------------|
 |<img src="./examples/im6_barchart.png" width="170" height="120"/><br/>18,General caution [Predicted: Incorrect]<br/> _Actual Sign: 21,Double curve_ |probablity: 71.21922302246094 , sign: 18,General caution<br/>probablity: 12.32940673828125 , sign: 12,Priority road<br/>probablity: 11.075485229492188 , sign: 26,Traffic signals         |
 
+- further investigate on sample images
+- precision & recal diagram
+- test validation
+- feature map
