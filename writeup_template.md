@@ -108,13 +108,13 @@ Image 2: 14,Stop [Predicted: Correct]
 
 | Top 3 Softmax probablities                                   | Top 3 softmax probablities                                       |
 | -------------------------------------------------------------|:----------------------------------------------------------------:|
-|<img src="./examples/bad_image.png" width="150" height="150"/>|<ul><li>probablity: 99.99974060058594 , sign: 14,Stop</li><li>probablity: 0.00011504661233630031 , sign: 12,Priority road</li><li>probablity: 7.005963561823592e-05 , sign: 33,Turn right ahead</li></ul>    |
+|<img src="./examples/bad_image.png" width="150" height="150"/>| *probablity: 99.99974060058594 , sign: 14 Stop *probablity: 0.00011504661233630031 , sign: 12,Priority road *probablity: 7.005963561823592e-05 , sign: 33,Turn right ahead    |
 
 Image 3: 25,Road work [Predicted: Correct]
 
 | Top 3 Softmax probablities                                   | Top 3 softmax probablities                                       |
 | -------------------------------------------------------------|:----------------------------------------------------------------:|
-|<img src="./examples/bad_image.png" width="150" height="150"/>| <ul><li>probablity: 94.52849578857422 , sign: 25,Road work</li><li>probablity: 5.44403076171875 , sign: 22,Bumpy road</li><li>probablity: 0.01412796694785 , sign: 31,Wild animals crossing</li></ul>    |
+|<img src="./examples/bad_image.png" width="150" height="150"/>| *probablity: 94.52849578857422 , sign: 25,Road work *probablity: 5.44403076171875 , sign: 22,Bumpy road *probablity: 0.01412796694785 , sign: 31,Wild animals crossing    |
 
 Image 4: 23,Slippery road [Predicted: Incorrect] _Actual Sign: 31,Wild animals crossing_
 
