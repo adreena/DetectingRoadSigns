@@ -86,7 +86,7 @@ For measuring accuracy of each epoch, validation-set is passed to the model and 
 ### Testing model on new images
 
 In this practice, I found 7 sample images from web, preprocessed them and ran them through the model:
-<img src="./examples/bad_image.png" width="150" height="150"/> <img src="./examples/bad_image.png" width="150" height="150"/> <img src="./examples/bad_image.png" width="150" height="150"/> <img src="./examples/bad_image.png" width="150" height="150"/> <img src="./examples/bad_image.png" width="150" height="150"/> <img src="./examples/bad_image.png" width="150" height="150"/> <img src="./examples/bad_image.png" width="150" height="150"/> <img src="./examples/bad_image.png" width="150" height="150"/> 
+<img src="./sample_traffic_signs/1.jpg" width="150" height="150"/> <img src="./sample_traffic_signs/2.jpg" width="150" height="150"/> <img src="./sample_traffic_signs/3.jpg" width="150" height="150"/> <img src="./sample_traffic_signs/4.jpg" width="150" height="150"/> <img src="./sample_traffic_signs/5.jpg" width="150" height="150"/> <img src="./sample_traffic_signs/6.jpg" width="150" height="150"/>
 
 overall accuracy shows 0.571, model performs very well on the first 4 images but acts poorly on the rest of them
 
