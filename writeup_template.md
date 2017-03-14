@@ -90,18 +90,26 @@ In this practice, I found 7 sample images from web, preprocessed them and ran th
 
 overall accuracy shows 0.571, model performs very well on the first 4 images but acts poorly on the rest of them
 
-**Image 0** [Predicted: _Correct_] **97% accuracy**
-**Predicted Sign**: 1,Speed limit (30km/h)
-**Actual Sign**: 1,Speed limit (30km/h)
+Image 0 [Predicted: _Correct_] 97% accuracy
+
+Predicted Sign: 1,Speed limit (30km/h)
+
+Actual Sign: 1,Speed limit (30km/h)
 
 Top 3 results:
 probablity: 97.95446014404297 , sign: 1,Speed limit (30km/h)
 probablity: 0.615595817565918 , sign: 4,Speed limit (70km/h)
 probablity: 0.5799821615219116 , sign: 0,Speed limit (20km/h)
+---
+| Epoch         | Accuracy                                                               |
+| ------------- |:----------------------------------------------------------------------:|
+| 0             |   <img src="./examples/bad_image.png" width="150" height="150"/>       |
+| 15            |                                                                        |
+| 29            |                                                                        |
 
+Image 1 [Predicted: _Correct_] **100% accuracy**
 
-**Image 1** [Predicted: _Correct_] **100% accuracy**
-**Predicted Sign**: 12,Priority road
+Predicted Sign**: 12,Priority road
 **Actual Sign**: 12,Priority road
 
 Top 3 results:
