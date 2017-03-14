@@ -12,7 +12,6 @@ The goals / steps of this project are the following:
 * Step 6: downloading and testing a few extra samples from the web (analyzing them by precision and recall of each sign)
 * Step 7: evaluating test set
 * Step 8: visualizing feature map with sample image from test set
-
 * goals: achieving a high accuracy on test images 
 
 ### Dataset Exploration
@@ -36,8 +35,11 @@ Picking random images from training set also shows that not all images have good
 
 ## Design and Test a Model Architecture
 
-Althoug colors play an important role to show the type of traffic signs, there are also variety of reasons which might affect these colors and how they're reflected to drivers; Such as signs in dark shadows of trees/mountains or being exposed different sun angles thorughout the day. In order to train the nework independenlty from the color-factor and to reduce complexity, I performed a preprocessing step on images to convert them to grayscale and cutting down 3-channels to only 1-channel, I also normalized images with mean 0 and ((1)) << , to get a better distribution.()<-  
+# Network
+Although colors play an important role to show the type of traffic signs, there are also variety of reasons which might affect these colors and how they're reflected to drivers; Such as signs in dark shadows of trees/mountains or being exposed different sun angles thorughout the day. In order to train the nework independenlty from the color-factor and to reduce complexity, I performed a preprocessing step on images to convert them to grayscale and cutting down 3-channels to only 1-channel, I also normalized images with mean 0 and ((1)) << , to get a better distribution.(....) Training-labels or Y-train are also converted to one-hot format.
+
 Preprocessing on 2 images:
+
 <img src="./examples/bad_image.png" width="150" height="150"/> 
 <img src="./examples/bad_image.png" width="150" height="150"/>
 <img src="./examples/bad_image.png" width="150" height="150"/> 
@@ -45,8 +47,11 @@ Preprocessing on 2 images:
 <img src="./examples/bad_image.png" width="150" height="150"/>
 <img src="./examples/bad_image.png" width="150" height="150"/>
 
-After preprocessing step, images are ready to train the model, but in order to make model even more independent from the data, I added noise to 500 of images and appended them to the training set, which in result increase the size of training set to 35299. 
+
+After preprocessing step, images are ready to train the model, but in order to make model even more independent from the data, I added noise to 500 random images and appended them to the training set, which in result increase the size of training set to 35299 which significantly improved my model accuracy on 5 web-sample images
+
 Here are 2 examples of extra images with added noise:
+
 <img src="./examples/bad_image.png" width="150" height="150"/> 
 <img src="./examples/bad_image.png" width="150" height="150"/>
 <img src="./examples/bad_image.png" width="150" height="150"/> 
@@ -60,5 +65,15 @@ Network used for this exercise consists of 6 layers similar to LeNet structure, 
   * f1 layer: is a fully connected layer with 120 nodes, in order to pass outputs of conv2 layer to this layer, it should be reshaped to a flat array 400x1. Weights connecting conv2 to f1 are 400x120 and 120 biases are added to the output. Regularization method used in this layer is drop_out of 50% to prevent model from overfitting.
   * f2 layer: is another fully connected layer with 84 nodes, connected with 120x84 weights from f1 layer and 84 biases. 50% Drop_out is applied to this layer as well as f1.
   * output layer: is the final layer with 43 nodes, 84x43 weights and 43 biases, which classifies the results into 43 categories of signs
-  
+ 
+I started training with 10 epochs but the accuracy wasn't below 90%, considering that learning-reat is 0.001 and 50% of outputs to f1 & f2 layers are dropping in each iteration I increased epochs to 30 and achieved higher accuracy. Optimizer used in this network is Adamoptimzer which minimizes model's cost that is the distance of predicted-labels from target-labels. 
+Final training configuration:
+ - Optimizer: Adamoptimizer
+ - learning-rate : 0.001
+ - epochs: 30
+ - batch-size : 128
+ - cost function: (cross_entropy)
+
+# Evaluation
+ 
 
