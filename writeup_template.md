@@ -118,22 +118,24 @@ Image 3: 25,Road work [Predicted: Correct]
 | -------------------------------------------------------------|:----------------------------------------------------------------:|
 |<img src="./examples/bad_image.png" width="150" height="150"/>| <ul><li>probablity: 94.52849578857422 , sign: 25,Road work</li><li>probablity: 5.44403076171875 , sign: 22,Bumpy road</li><li>probablity: 0.01412796694785 , sign: 31,Wild animals crossing</li><ul>    |
 
-Image 4: 23,Slippery road [Predicted: Incorrect] <\br>
+Image 4: 23,Slippery road [Predicted: Incorrect]
+
 Actual Sign: 31,Wild animals crossing
 
 | Top 3 Softmax probablities                                   | Top 3 softmax probablities                                       |
 | -------------------------------------------------------------|:----------------------------------------------------------------:|
 |<img src="./examples/bad_image.png" width="150" height="150"/>|<ul><li>probablity: 99.63726043701172 , sign: 23,Slippery road</li><li>probablity: 0.2470851391553 , sign: 10,No passing for vehicles ..</li><li>probablity: 0.08363259583711624 , sign: 31,Wild animals crossing</li></ul> |
 
-Image 5: 11,Right-of-way at the next intersection [Predicted: Incorrect] <\br>
+Image 5: 11,Right-of-way at the next intersection [Predicted: Incorrect]
+
 Actual Sign: 23,Slippery road
-<img src="./examples/bad_image.png" width="150" height="150"/>
 
 | Top 3 Softmax probablities                                   | Top 3 softmax probablities                                       |
 | -------------------------------------------------------------|:----------------------------------------------------------------:|
 |<img src="./examples/bad_image.png" width="150" height="150"/>|<ul><li>probablity: 86.93489074707031 , sign: 11,Right-of-way at the ...</li><li>probablity: 2.6319382190704346 , sign: 30,Beware of ice/snow</li><li>probablity: 2.462770700454712 , sign: 37,Go straight or left</li></ul>     |
 
-Image 6: 18,General caution [Predicted: Incorrect] <\br>
+Image 6: 18,General caution [Predicted: Incorrect] 
+
 Actual Sign: 21,Double curve
 
 | Top 3 Softmax probablities                                   | Top 3 softmax probablities                                       |
