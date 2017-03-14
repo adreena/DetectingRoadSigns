@@ -101,14 +101,14 @@ Image 1: 12,Priority road [Predicted: Correct]
 
 | Top 3 Softmax probablities                                   | Top 3 softmax probablities                                       |
 | -------------------------------------------------------------|:----------------------------------------------------------------:|
-|<img src="./examples/bad_image.png" width="150" height="150"/>|*probablity: 100.0 , sign: 12,Priority road *probablity: 2.082616455610628e-25 , sign: 40,Roundabout mandatory *probablity: 7.620977317941738e-32 , sign: 15,No vehicles         | 
+|<img src="./examples/bad_image.png" width="150" height="150"/>|probablity: 100.0 , sign: 12,Priority road<br/>probablity: 2.082616455610628e-25 , sign: 40,Roundabout mandatory<br/>probablity: 7.620977317941738e-32 , sign: 15,No vehicles         | 
 
 
 Image 2: 14,Stop [Predicted: Correct]
 
 | Top 3 Softmax probablities                                   | Top 3 softmax probablities                                       |
 | -------------------------------------------------------------|:----------------------------------------------------------------:|
-|<img src="./examples/bad_image.png" width="150" height="150"/>| *probablity: 99.99974060058594 , sign: 14 Stop *probablity: 0.00011504661233630031 , sign: 12,Priority road *probablity: 7.005963561823592e-05 , sign: 33,Turn right ahead    |
+|<img src="./examples/bad_image.png" width="150" height="150"/>|probablity: 99.99974060058594 , sign: 14 Stop<br/>probablity: 0.00011504661233630031 , sign: 12,Priority road<br/>probablity: 7.005963561823592e-05 , sign: 33,Turn right ahead    |
 
 Image 3: 25,Road work [Predicted: Correct]
 
