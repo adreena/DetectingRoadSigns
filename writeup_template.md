@@ -100,37 +100,37 @@ Image 0: 1,Speed limit (30km/h) [Predicted: Correct]
 Image 1: 12,Priority road [Predicted: Correct]
 
 | Top 3 Softmax probablities                                   | Top 3 softmax probablities                                       |
-| -------------------------------------------------------------|:----------------------------------------------------------------:|
+| -------------------------------------------------------------|:-----------------------------------------------------------------|
 |<img src="./examples/bad_image.png" width="150" height="150"/>|probablity: 100.0 , sign: 12,Priority road<br/>probablity: 2.082616455610628e-25 , sign: 40,Roundabout mandatory<br/>probablity: 7.620977317941738e-32 , sign: 15,No vehicles         | 
 
 
 Image 2: 14,Stop [Predicted: Correct]
 
 | Top 3 Softmax probablities                                   | Top 3 softmax probablities                                       |
-| -------------------------------------------------------------|:----------------------------------------------------------------:|
+| -------------------------------------------------------------|:-----------------------------------------------------------------|
 |<img src="./examples/bad_image.png" width="150" height="150"/>|probablity: 99.99974060058594 , sign: 14 Stop<br/>probablity: 0.00011504661233630031 , sign: 12,Priority road<br/>probablity: 7.005963561823592e-05 , sign: 33,Turn right ahead    |
 
 Image 3: 25,Road work [Predicted: Correct]
 
 | Top 3 Softmax probablities                                   | Top 3 softmax probablities                                       |
-| -------------------------------------------------------------|:----------------------------------------------------------------:|
-|<img src="./examples/bad_image.png" width="150" height="150"/>| *probablity: 94.52849578857422 , sign: 25,Road work *probablity: 5.44403076171875 , sign: 22,Bumpy road *probablity: 0.01412796694785 , sign: 31,Wild animals crossing    |
+| -------------------------------------------------------------|:-----------------------------------------------------------------|
+|<img src="./examples/bad_image.png" width="150" height="150"/>|probablity: 94.52849578857422 , sign: 25,Road work<br/>probablity: 5.44403076171875 , sign: 22,Bumpy road<br/>probablity: 0.01412796694785 , sign: 31,Wild animals crossing    |
 
 Image 4: 23,Slippery road [Predicted: Incorrect] _Actual Sign: 31,Wild animals crossing_
 
 | Top 3 Softmax probablities                                   | Top 3 softmax probablities                                       |
-| -------------------------------------------------------------|:----------------------------------------------------------------:|
-|<img src="./examples/bad_image.png" width="150" height="150"/>|* probablity: 99.63726043701172 , sign: 23,Slippery road *probablity: 0.2470851391553 , sign: 10,No passing for vehicles .. *probablity: 0.08363259583711624 , sign: 31,Wild animals crossing |
+| -------------------------------------------------------------|:-----------------------------------------------------------------|
+|<img src="./examples/bad_image.png" width="150" height="150"/>|probablity: 99.63726043701172 , sign: 23,Slippery road<br/>probablity: 0.2470851391553 , sign: 10,No passing for vehicles ..<br/>probablity: 0.08363259583711624 , sign: 31,Wild animals crossing |
 
 Image 5: 11,Right-of-way at the next intersection [Predicted: Incorrect] _Actual Sign: 23,Slippery road_
 
 | Top 3 Softmax probablities                                   | Top 3 softmax probablities                                       |
-| -------------------------------------------------------------|:----------------------------------------------------------------:|
-|<img src="./examples/bad_image.png" width="150" height="150"/>|*probablity: 86.93489074707031 , sign: 11,Right-of-way at the ... *probablity: 2.6319382190704346 , sign: 30,Beware of ice/snow *probablity: 2.462770700454712 , sign: 37,Go straight or left     |
+| -------------------------------------------------------------|:-----------------------------------------------------------------|
+|<img src="./examples/bad_image.png" width="150" height="150"/>|probablity: 86.93489074707031 , sign: 11,Right-of-way at the ...<br/>p..r<br/>probablity: 2.6319382190704346 , sign: 30,Beware of ice/snow<br/>probablity: 2.462770700454712 , sign: 37,Go straight or left     |
 
 Image 6: 18,General caution [Predicted: Incorrect] _Actual Sign: 21,Double curve_
 
 | Top 3 Softmax probablities                                   | Top 3 softmax probablities                                       |
-| -------------------------------------------------------------|:----------------------------------------------------------------:|
-|<img src="./examples/bad_image.png" width="150" height="150"/>|*probablity: 71.21922302246094 , sign: 18,General caution *probablity: 12.32940673828125 , sign: 12,Priority road *probablity: 11.075485229492188 , sign: 26,Traffic signals         |
+| -------------------------------------------------------------|:-----------------------------------------------------------------|
+|<img src="./examples/bad_image.png" width="150" height="150"/>|probablity: 71.21922302246094 , sign: 18,General caution<br/>probablity: 12.32940673828125 , sign: 12,Priority road<br/>probablity: 11.075485229492188 , sign: 26,Traffic signals         |
 
