@@ -35,7 +35,7 @@ Picking random images from training set also shows that not all images have good
 
 ## Design and Test a Model Architecture
 
-# Network
+### Network
 Although colors play an important role to show the type of traffic signs, there are also variety of reasons which might affect these colors and how they're reflected to drivers; Such as signs in dark shadows of trees/mountains or being exposed different sun angles thorughout the day. In order to train the nework independenlty from the color-factor and to reduce complexity, I performed a preprocessing step on images to convert them to grayscale and cutting down 3-channels to only 1-channel, I also normalized images with mean 0 and ((1)) << , to get a better distribution.(....) Training-labels or Y-train are also converted to one-hot format.
 
 Preprocessing on 2 images:
@@ -48,7 +48,7 @@ Preprocessing on 2 images:
 <img src="./examples/bad_image.png" width="150" height="150"/>
 
 
-After preprocessing step, images are ready to train the model, but in order to make model even more independent from the data, I added noise to 500 random images and appended them to the training set, which in result increase the size of training set to 35299 which significantly improved my model accuracy on 5 web-sample images
+After preprocessing step, images are ready to train the model, but in order to make model even more independent from the data, I added noise to 500 random images and appended them to the training set, which in result increase the size of training set to 35299 which improved my model accuracy on 7 web-sample images
 
 Here are 2 examples of extra images with added noise:
 
@@ -72,8 +72,90 @@ Final training configuration:
  - learning-rate : 0.001
  - epochs: 30
  - batch-size : 128
- - cost function: (cross_entropy)
+ - drop_out: 0.5
 
-# Evaluation
- 
+### Evaluation
+For measuring accuracy of each epoch, validation-set is passed to the model and the average number of correctly predicted labels is printed out, some of the iterations results:
+
+| Epoch         | Accuracy      |
+| ------------- |:-------------:|
+| 0             | 0.572         |
+| 15            | 0.933         |
+| 29            | 0.954         |
+
+### Testing model on new images
+
+In this practice, I found 7 sample images from web, preprocessed them and ran them through the model:
+<img src="./examples/bad_image.png" width="150" height="150"/> <img src="./examples/bad_image.png" width="150" height="150"/> <img src="./examples/bad_image.png" width="150" height="150"/> <img src="./examples/bad_image.png" width="150" height="150"/> <img src="./examples/bad_image.png" width="150" height="150"/> <img src="./examples/bad_image.png" width="150" height="150"/> <img src="./examples/bad_image.png" width="150" height="150"/> <img src="./examples/bad_image.png" width="150" height="150"/> 
+
+overall accuracy shows 0.571, model performs very well on the first 4 images but acts poorly on the rest of them
+
+**Image 0** [Predicted: _Correct_] **97% accuracy**
+**Predicted Sign**: 1,Speed limit (30km/h)
+**Actual Sign**: 1,Speed limit (30km/h)
+
+Top 3 results:
+probablity: 97.95446014404297 , sign: 1,Speed limit (30km/h)
+probablity: 0.615595817565918 , sign: 4,Speed limit (70km/h)
+probablity: 0.5799821615219116 , sign: 0,Speed limit (20km/h)
+==================================================
+**Image 1** [Predicted: _Correct_] **100% accuracy**
+**Predicted Sign**: 12,Priority road
+**Actual Sign**: 12,Priority road
+
+Top 3 results:
+probablity: 100.0 , sign: 12,Priority road
+probablity: 2.082616455610628e-25 , sign: 40,Roundabout mandatory
+probablity: 7.620977317941738e-32 , sign: 15,No vehicles
+==================================================
+
+**Image 2** [Predicted: _Correct_] **99% accuracy**
+**Predicted Sign**: 14,Stop
+**Actual Sign**: 14,Stop
+
+Top 3 results:
+probablity: 99.99974060058594 , sign: 14,Stop
+probablity: 0.00011504661233630031 , sign: 12,Priority road
+probablity: 7.005963561823592e-05 , sign: 33,Turn right ahead
+==================================================
+
+**Image 3** [Predicted: _Correct_] **94% accuracy**
+**Predicted Sign**: 25,Road work
+**Actual Sign**: 25,Road work
+
+Top 3 results:
+probablity: 94.52849578857422 , sign: 25,Road work
+probablity: 5.44403076171875 , sign: 22,Bumpy road
+probablity: 0.014127966947853565 , sign: 31,Wild animals crossing
+==================================================
+
+**Image 4** [Predicted: Incorrect]
+**Predicted Sign**: 23,Slippery road
+**Actual Sign**: 31,Wild animals crossing
+
+Top 3 results:
+probablity: 99.63726043701172 , sign: 23,Slippery road
+probablity: 0.24708513915538788 , sign: 10,No passing for vehicles over 3.5 metric tons
+probablity: 0.08363259583711624 , sign: 31,Wild animals crossing
+==================================================
+
+**Image 5** [Predicted: _Incorrect_]
+Predicted Sign: 11,Right-of-way at the next intersection
+Actual Sign: 23,Slippery road
+
+Top 3 results:
+probablity: 86.93489074707031 , sign: 11,Right-of-way at the next intersection
+probablity: 2.6319382190704346 , sign: 30,Beware of ice/snow
+probablity: 2.462770700454712 , sign: 37,Go straight or left
+==================================================
+
+**Image 6** [Predicted: _Incorrect_]
+**Predicted Sign**: 18,General caution
+**Actual Sign**: 21,Double curve
+
+Top 3 results:
+probablity: 71.21922302246094 , sign: 18,General caution
+probablity: 12.32940673828125 , sign: 12,Priority road
+probablity: 11.075485229492188 , sign: 26,Traffic signals
+==================================================
 
