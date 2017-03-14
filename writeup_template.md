@@ -38,24 +38,19 @@ Picking random images from training set also shows that not all images have good
 ### Network
 Although colors play an important role to show the type of traffic signs, there are also variety of reasons which might affect these colors and how they're reflected to drivers; Such as signs in dark shadows of trees/mountains or being exposed different sun angles thorughout the day. In order to train the nework independenlty from the color-factor and to reduce complexity, I performed a preprocessing step on images to convert them to grayscale and cutting down 3-channels to only 1-channel, I also normalized images with mean 0 and ((1)) << , to get a better distribution.(....) Training-labels or Y-train are also converted to one-hot format.
 
-Preprocessing on 2 images:
+Preprocessing on 1 images:
 
-<img src="./examples/bad_image.png" width="150" height="150"/> 
-<img src="./examples/bad_image.png" width="150" height="150"/>
-<img src="./examples/bad_image.png" width="150" height="150"/> 
-<img src="./examples/bad_image.png" width="150" height="150"/>
-<img src="./examples/bad_image.png" width="150" height="150"/>
-<img src="./examples/bad_image.png" width="150" height="150"/>
-
+<img src="./examples/n_1.png" width="150" height="150"/> 
+<img src="./examples/g_1.png" width="150" height="150"/>
+<img src="./examples/n_11.png" width="150" height="150"/>
 
 After preprocessing step, images are ready to train the model, but in order to make model even more independent from the data, I added noise to 500 random images and appended them to the training set, which in result increase the size of training set to 35299 which improved my model accuracy on 7 web-sample images
 
 Here are 2 examples of extra images with added noise:
-
-<img src="./examples/bad_image.png" width="150" height="150"/> 
-<img src="./examples/bad_image.png" width="150" height="150"/>
-<img src="./examples/bad_image.png" width="150" height="150"/> 
-<img src="./examples/bad_image.png" width="150" height="150"/>
+| original                                                   | noise                                                       |
+| ---------------------------------------------------------- | ----------------------------------------------------------- |
+| <img src="./examples/noise1.png" width="150" height="150"/>|<img src="./examples/noise1_1.png" width="150" height="150"/>|
+| <img src="./examples/noise2.png" width="150" height="150"/>|<img src="./examples/noise2_1.png" width="150" height="150"/>|
 
 Network used for this exercise consists of 6 layers similar to LeNet structure, input, 4 hidden layers and output:
 
@@ -86,7 +81,7 @@ For measuring accuracy of each epoch, validation-set is passed to the model and 
 ### Testing model on new images
 
 In this practice, I found 7 sample images from web, preprocessed them and ran them through the model:
-<img src="./sample_traffic_signs/1.jpg" width="150" height="150"/> <img src="./sample_traffic_signs/2.jpg" width="150" height="150"/> <img src="./sample_traffic_signs/3.jpg" width="150" height="150"/> <img src="./sample_traffic_signs/4.jpg" width="150" height="150"/> <img src="./sample_traffic_signs/5.jpg" width="150" height="150"/> <img src="./sample_traffic_signs/6.jpg" width="150" height="150"/>
+<img src="./sample_traffic_signs/1.jpg" width="150" height="150"/> <img src="./sample_traffic_signs/2.jpg" width="150" height="150"/> <img src="./sample_traffic_signs/3.jpg" width="150" height="150"/> <img src="./sample_traffic_signs/4.jpg" width="150" height="150"/> <img src="./sample_traffic_signs/5.jpg" width="150" height="150"/> <img src="./sample_traffic_signs/6.jpg" width="150" height="150"/><img src="./sample_traffic_signs/7.jpg" width="150" height="150"/>
 
 overall accuracy shows 0.571, model performs very well on the first 4 images but acts poorly on the rest of them
 
