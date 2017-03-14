@@ -155,7 +155,5 @@ Actual Sign: 21,Double curve
 
 | Top 3 Softmax probablities                                   | Top 3 softmax probablities                                       |
 | -------------------------------------------------------------|:----------------------------------------------------------------:|
-|<img src="./examples/bad_image.png" width="150" height="150"/>| probablity: 71.21922302246094 , sign: 18,General caution         | 
-|                                                              | probablity: 12.32940673828125 , sign: 12,Priority road           |
-|                                                              | probablity: 11.075485229492188 , sign: 26,Traffic signals        |
+|<img src="./examples/bad_image.png" width="150" height="150"/>| <ul><li>probablity: 71.21922302246094 , sign: 18,General caution</li><li>item2</li><li>probablity: 12.32940673828125 , sign: 12,Priority road</li><li>probablity: 11.075485229492188 , sign: 26,Traffic signals</li></ul>         |
 
