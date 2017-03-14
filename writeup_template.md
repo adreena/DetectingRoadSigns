@@ -93,36 +93,36 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
 
 | Image 0                                                      | Top 3 softmax probablities                                      |
 | -------------------------------------------------------------|:----------------------------------------------------------------|
-|<img src="./examples/bad_image.png" width="150" height="150"/><br/>1,Speed limit (30km/h) [Predicted: Correct]|probablity: 97.95446014404297 , sign: 1,Speed limit (30km/h)<br/>probablity: 0.615595817565918 , sign: 4,Speed limit (70km/h)<br/>probablity: 0.5799821615219116 , sign: 0,Speed limit (20km/h)    | 
+|<img src="./examples/im0_barchart.png" width="150" height="150"/><br/>1,Speed limit (30km/h) [Predicted: Correct]|probablity: 97.95446014404297 , sign: 1,Speed limit (30km/h)<br/>probablity: 0.615595817565918 , sign: 4,Speed limit (70km/h)<br/>probablity: 0.5799821615219116 , sign: 0,Speed limit (20km/h)    | 
 
 | Image 1                                                      | Top 3 softmax probablities                                       |
 | -------------------------------------------------------------|:-----------------------------------------------------------------|
-|<img src="./examples/bad_image.png" width="150" height="150"/><br/>12,Priority road [Predicted: Correct]|probablity: 100.0 , sign: 12,Priority road<br/>probablity: 2.082616455610628e-25 , sign: 40,Roundabout mandatory<br/>probablity: 7.620977317941738e-32 , sign: 15,No vehicles         | 
+|<img src="./examples/im1_barchart.png" width="150" height="150"/><br/>12,Priority road [Predicted: Correct]|probablity: 100.0 , sign: 12,Priority road<br/>probablity: 2.082616455610628e-25 , sign: 40,Roundabout mandatory<br/>probablity: 7.620977317941738e-32 , sign: 15,No vehicles         | 
 
 
 | Image 2                                                      | Top 3 softmax probablities                                       |
 | -------------------------------------------------------------|:-----------------------------------------------------------------|
-|<img src="./examples/bad_image.png" width="150" height="150"/><br/>14,Stop [Predicted: Correct]|probablity: 99.99974060058594 , sign: 14 Stop<br/>probablity: 0.00011504661233630031 , sign: 12,Priority road<br/>probablity: 7.005963561823592e-05 , sign: 33,Turn right ahead    |
+|<img src="./examples/im2_barchart.png" width="150" height="150"/><br/>14,Stop [Predicted: Correct]|probablity: 99.99974060058594 , sign: 14 Stop<br/>probablity: 0.00011504661233630031 , sign: 12,Priority road<br/>probablity: 7.005963561823592e-05 , sign: 33,Turn right ahead    |
 
 
 | Image 3                                                      | Top 3 softmax probablities                                       |
 | -------------------------------------------------------------|:-----------------------------------------------------------------|
-|<img src="./examples/bad_image.png" width="150" height="150"/><br/>25,Road work [Predicted: Correct]|probablity: 94.52849578857422 , sign: 25,Road work<br/>probablity: 5.44403076171875 , sign: 22,Bumpy road<br/>probablity: 0.01412796694785 , sign: 31,Wild animals crossing    |
+|<img src="./examples/im3_barchart.png" width="150" height="150"/><br/>25,Road work [Predicted: Correct]|probablity: 94.52849578857422 , sign: 25,Road work<br/>probablity: 5.44403076171875 , sign: 22,Bumpy road<br/>probablity: 0.01412796694785 , sign: 31,Wild animals crossing    |
 
 
 | Image 4                                                      | Top 3 softmax probablities                                       |
 | -------------------------------------------------------------|:-----------------------------------------------------------------|
-|<img src="./examples/bad_image.png" width="150" height="150"/><br/>23,Slippery road [Predicted: Incorrect]<br/> _Actual Sign: 31,Wild animals crossing_|probablity: 99.63726043701172 , sign: 23,Slippery road<br/>probablity: 0.2470851391553 , sign: 10,No passing for vehicles ..<br/>probablity: 0.08363259583711624 , sign: 31,Wild animals crossing |
+|<img src="./examples/im4_barchart.png" width="150" height="150"/><br/>23,Slippery road [Predicted: Incorrect]<br/> _Actual Sign: 31,Wild animals crossing_|probablity: 99.63726043701172 , sign: 23,Slippery road<br/>probablity: 0.2470851391553 , sign: 10,No passing for vehicles ..<br/>probablity: 0.08363259583711624 , sign: 31,Wild animals crossing |
 
 
 
 | Image 5                                                      | Top 3 softmax probablities                                       |
 | -------------------------------------------------------------|:-----------------------------------------------------------------|
-|<img src="./examples/bad_image.png" width="150" height="150"/><br/>11,Right-of-way at the nex.. [Predicted: Incorrect]<br/>_Actual Sign: 23,Slippery road_|probablity: 86.93489074707031 , sign: 11,Right-of-way at the ...<br/>probablity: 2.6319382190704346 , sign: 30,Beware of ice/snow<br/>probablity: 2.462770700454712 , sign: 37,Go straight or left     |
+|<img src="./examples/im5_barchart.png" width="150" height="150"/><br/>11,Right-of-way at the nex.. [Predicted: Incorrect]<br/>_Actual Sign: 23,Slippery road_|probablity: 86.93489074707031 , sign: 11,Right-of-way at the ...<br/>probablity: 2.6319382190704346 , sign: 30,Beware of ice/snow<br/>probablity: 2.462770700454712 , sign: 37,Go straight or left     |
 
 
 
 | Image 6                                                      | Top 3 softmax probablities                                       |
 | -------------------------------------------------------------|:-----------------------------------------------------------------|
-|<img src="./examples/bad_image.png" width="150" height="150"/><br/>18,General caution [Predicted: Incorrect]<br/> _Actual Sign: 21,Double curve_ |probablity: 71.21922302246094 , sign: 18,General caution<br/>probablity: 12.32940673828125 , sign: 12,Priority road<br/>probablity: 11.075485229492188 , sign: 26,Traffic signals         |
+|<img src="./examples/im6_barchart.png" width="150" height="150"/><br/>18,General caution [Predicted: Incorrect]<br/> _Actual Sign: 21,Double curve_ |probablity: 71.21922302246094 , sign: 18,General caution<br/>probablity: 12.32940673828125 , sign: 12,Priority road<br/>probablity: 11.075485229492188 , sign: 26,Traffic signals         |
 
