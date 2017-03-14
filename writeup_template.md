@@ -95,7 +95,7 @@ Image 0: 1,Speed limit (30km/h) [Predicted: Correct]
 
 | Top 3 Softmax probablities                                   | Top 3 softmax probablities                                       |
 | -------------------------------------------------------------|:----------------------------------------------------------------:|
-|<img src="./examples/bad_image.png" width="150" height="150"/>|*probablity: 97.95446014404297 , sign: 1,Speed limit (30km/h) *probablity: 0.615595817565918 , sign: 4,Speed limit (70km/h) *probablity: 0.5799821615219116 , sign: 0,Speed limit (20km/h)    | 
+|<img src="./examples/bad_image.png" width="150" height="150"/>|probablity: 97.95446014404297 , sign: 1,Speed limit (30km/h)<br/>probablity: 0.615595817565918 , sign: 4,Speed limit (70km/h)<br/>probablity: 0.5799821615219116 , sign: 0,Speed limit (20km/h)    | 
 
 Image 1: 12,Priority road [Predicted: Correct]
 
@@ -126,7 +126,7 @@ Image 5: 11,Right-of-way at the next intersection [Predicted: Incorrect] _Actual
 
 | Top 3 Softmax probablities                                   | Top 3 softmax probablities                                       |
 | -------------------------------------------------------------|:-----------------------------------------------------------------|
-|<img src="./examples/bad_image.png" width="150" height="150"/>|probablity: 86.93489074707031 , sign: 11,Right-of-way at the ...<br/>p..r<br/>probablity: 2.6319382190704346 , sign: 30,Beware of ice/snow<br/>probablity: 2.462770700454712 , sign: 37,Go straight or left     |
+|<img src="./examples/bad_image.png" width="150" height="150"/>|probablity: 86.93489074707031 , sign: 11,Right-of-way at the ...<br/>probablity: 2.6319382190704346 , sign: 30,Beware of ice/snow<br/>probablity: 2.462770700454712 , sign: 37,Go straight or left     |
 
 Image 6: 18,General caution [Predicted: Incorrect] _Actual Sign: 21,Double curve_
 
