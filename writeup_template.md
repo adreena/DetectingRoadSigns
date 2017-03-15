@@ -12,7 +12,7 @@ The goals / steps of this project are the following:
 * Step 6: downloading and testing a few extra samples from the web (analyzing them by precision and recall of each sign)
 * Step 7: evaluating test set
 * Step 8: visualizing feature map with sample image from test set
-* goals: achieving a high accuracy on test images 
+* goal : achieving a high accuracy on test images 
 
 ### Dataset Exploration
 
@@ -22,12 +22,11 @@ Dataset in this expermient consists of 32x32 images with 3 channels and 43 label
  * Testing data size: 12630
  * Note: after adding noise to training set , its size increases to 35299
  
-I visualized training-set based on the frequency of signs to get a better undesrtanding of how well model can be trained based on the variations and if the number of images (for each sign) in the data has a direct impact on the accuracy of model to predict labels.
+I visualized training-set based on the frequency of signs to get a better undesrtanding of how well data is distrubuted and if the number of images (for each sign) in the data has a direct impact on the accuracy of model to predict labels.
 
 <img src="./examples/training_freq.png" width="750" height="280"/>
 
-As shown above, the number of images for some of the signs such as [0-Speed limit (20km/h)] , [19-Dangerous curve to the left] or [37-Go straight or left] is relatively smaller than the other signs with frequecy higher than 1200 such as [1-Speed limit (30km/h)]. 
-Depending on image qualities model might not perform well enough on detecting signs with fewer training samples in comparison to the ones with 1200 samples.
+As shown above, some of the signs such as [0-Speed limit (20km/h)] , [19-Dangerous curve to the left] or [37-Go straight or left] have very few samples in comparison to other signs with frequecy higher than 1200 such as [1-Speed limit (30km/h)]; and depending on image qualities this might affect the model accuracy on predicting signs with fewer samples in training set.
 
 Picking random images from training set also shows that not all images have good qualities. Dark shades or bad sun exposure can make signs look similar to some of the other signs which can also introduce noise into the model. One sample is shown below
 
@@ -35,8 +34,8 @@ Picking random images from training set also shows that not all images have good
 
 ## Design and Test a Model Architecture
 
-### Network
-Although colors play an important role to show the type of traffic signs, there are also variety of reasons which might affect these colors and how they're reflected to drivers; Such as signs in dark shadows of trees/mountains or being exposed different sun angles thorughout the day. In order to train the nework independenlty from the color-factor and to reduce complexity, I performed a preprocessing step on images to convert them to grayscale and cutting down 3-channels to only 1-channel, I also normalized images with mean 0 and ((1)) << , to get a better distribution.(....) Training-labels or Y-train are also converted to one-hot format.
+### Preprocessing
+Although colors play an important role to show the type of traffic signs, there are also variety of reasons which might affect these colors and how they're reflected to drivers; including dark shadows of trees/mountains or different sun angles thorughout the day. In order to train the network independenlty from the color-factor and to reduce complexity, I performed a preprocessing step on images to convert them to grayscale and cutting down 3-channels to only 1-channel, I also normalized images with mean 0 and ((1)) << , to get a better distribution.(....) Training-labels or Y-train are also converted to one-hot format.
 
 Preprocessing on 1 images:
 <table style="width:100%">
@@ -53,7 +52,7 @@ Preprocessing on 1 images:
 </table>
 
 
-After preprocessing step, images are ready to train the model, but in order to make model even more independent from the data, I added noise to 500 random images and appended them to the training set, which in result increase the size of training set to 35299 which improved my model accuracy on 7 web-sample images
+After preprocessing step, images are ready to train the model, but in order to make model even more generalized, I added noise to `500` random images and appended them to the training set, which in result increase the size of training set to `35299`, which improved my model accuracy on 7 web-sample images experiment.
 
 Here are 2 examples of extra images with added noise:
 <table style="width:100%">
@@ -71,16 +70,33 @@ Here are 2 examples of extra images with added noise:
   </tr>
 </table>
 
-Network used for this exercise consists of 6 layers similar to LeNet structure, input, 4 hidden layers and output:
-
-  * input layer: 32x32x1 images connect with 5x5x1x6 weights to 1st hidden layer
-  * conv1 layer: is convolutional layer with filter size of 5x5x1, depth of 6 and stride of 1 and. After passing thorugh filters biases are added and data gets actiavted with relu to ((3)). Pooling method used in this layer is max_pool with kernel size of 2 to reduce the size of output to 10x10x6. 
-  * conv2 layer: is the 2nd convolutional layer with filter size of 5x5x6, depth of 16 and stride of 1. Similar to previous layer, after passing thorugh filters biases are added and data gets actiavted with relu to ((3)). Pooling method used in this layer is max_pool with kernel size of 2 to reduce the size of output to 5x5x16. 
-  * f1 layer: is a fully connected layer with 120 nodes, in order to pass outputs of conv2 layer to this layer, it should be reshaped to a flat array 400x1. Weights connecting conv2 to f1 are 400x120 and 120 biases are added to the output. Regularization method used in this layer is drop_out of 50% to prevent model from overfitting.
-  * f2 layer: is another fully connected layer with 84 nodes, connected with 120x84 weights from f1 layer and 84 biases. 50% Drop_out is applied to this layer as well as f1.
-  * output layer: is the final layer with 43 nodes, 84x43 weights and 43 biases, which classifies the results into 43 categories of signs
+### Network
+Network used for this exercise consists of 6 layers similar to LeNet structure, input layer, 4 hidden layers and output layer:
+<ul>
+<li><b>input layer:</b><br/> 32x32x1 images connect with 5x5x1x6 weights to 1st hidden layer</li>
+<li><b>conv1 layer:</b><br/>
+  first convolutional layer with filter size of 5x5x1, depth of 6 and stride of 1.<br/> 
+  After passing thorugh filters biases are added and data gets actiavted with relu to ((3)). <br/>
+  Pooling method used in this layer is max_pool with kernel size of 2 to reduce the size of output to 10x10x6. 
+</li>
+<li><b>conv2 layer:</b><br/>
+2nd convolutional layer with filter size of 5x5x6, depth of 16 and stride of 1.<br/>
+Similar to previous layer, after passing thorugh filters biases are added and data gets actiavted with relu to ((3)).<br/>
+Pooling method used in this layer is max_pool with kernel size of 2 to reduce the size of output to 5x5x16. 
+</li>
+<li><b>f1 layer:</b> 
+it is a fully connected layer with 120 nodes, in order to pass outputs of conv2 layer to this layer, it should be reshaped to a flat array 400x1. Weights connecting conv2 to f1 are 400x120 and 120 biases are added to the output.<br/>
+Regularization method used in this layer is drop_out of 50% to prevent model from overfitting.
+</li>
+<li><b>f2 layer:</b><br/>
+f2 is another fully connected layer with 84 nodes, connected with 120x84 weights from f1 layer and 84 biases.<br/>
+50% Drop_out is applied to this layer as well as f1.
+</li>
+<li><b>output layer:</b><br/>
+is the final layer with 43 nodes, 84x43 weights and 43 biases, which classifies the results into 43 categories of signs.
+</li></ul>
  
-I started training with 10 epochs but the accuracy wasn't below 90%, considering that learning-reat is 0.001 and 50% of outputs to f1 & f2 layers are dropping in each iteration I increased epochs to 30 and achieved higher accuracy. Optimizer used in this network is Adamoptimzer which minimizes model's cost that is the distance of predicted-labels from target-labels. 
+I started training with 10 epochs but the accuracy wasn't below 90%, considering that learning-reat is 0.001 and 50% of data in f1 & f2 layers are dropping in each iteration, I increased epochs to 30 and achieved higher accuracy. Optimizer used in this network is Adamoptimzer which minimizes model's cost that is the distance of predicted-labels from target-labels.<br/>
 Final training configuration:
  - Optimizer: Adamoptimizer
  - learning-rate : 0.001
@@ -102,11 +118,10 @@ For measuring accuracy of each epoch, validation-set is passed to the model and 
 </table>
 
 ### Testing model on new images
-
 In this practice, I found 7 sample images from web, preprocessed them and ran them through the model:
 <img src="./sample_traffic_signs/1.jpg" width="150" height="150"/> <img src="./sample_traffic_signs/2.jpg" width="150" height="150"/> <img src="./sample_traffic_signs/3.jpg" width="150" height="150"/> <img src="./sample_traffic_signs/4.jpg" width="150" height="150"/> <img src="./sample_traffic_signs/5.jpg" width="150" height="150"/> <img src="./sample_traffic_signs/6.jpg" width="150" height="150"/><img src="./sample_traffic_signs/7.jpg" width="150" height="150"/>
 
-overall accuracy shows 0.571, model performs very well on the first 4 images but acts poorly on the rest of them
+Overall accuracy shows `0.571`, model performs very well on the first 4 images but acts poorly on the rest of them
 <table style="width:100%">
   <tr>
     <th>Image</th>
