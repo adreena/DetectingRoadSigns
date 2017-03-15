@@ -123,7 +123,7 @@ Overall accuracy shows `0.571`, model performs very well on the first 4 images b
 <table style="width:100%">
   <tr>
     <th>Image</th>
-    <th colspan="2">Top 3 softmax probablities</th>
+    <th colspan="2">Top 5 softmax probablities</th>
   </tr>
   <tr>
     <td>
