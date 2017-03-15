@@ -60,18 +60,12 @@ Here are 2 examples of extra images with added noise:
   <tr>
     <th>Normalized</th>
     <th>With Noise</th>
+    <th>Normalized</th>
+    <th>With Noise</th>
   </tr>
   <tr>
     <td><img src="./examples/noise1.png" width="150" height="150"/></td>
     <td><img src="./examples/noise1_1.png" width="150" height="150"/></td>
-  </tr>
-</table>
-<table style="width:100%">
-  <tr>
-    <th>Normalized</th>
-    <th>With Noise</th>
-  </tr>
-   <tr>
     <td><img src="./examples/noise2.png" width="150" height="150"/></td>
     <td><img src="./examples/noise2_2.png" width="150" height="150"/></td>
   </tr>
