@@ -39,19 +39,37 @@ Picking random images from training set also shows that not all images have good
 Although colors play an important role to show the type of traffic signs, there are also variety of reasons which might affect these colors and how they're reflected to drivers; Such as signs in dark shadows of trees/mountains or being exposed different sun angles thorughout the day. In order to train the nework independenlty from the color-factor and to reduce complexity, I performed a preprocessing step on images to convert them to grayscale and cutting down 3-channels to only 1-channel, I also normalized images with mean 0 and ((1)) << , to get a better distribution.(....) Training-labels or Y-train are also converted to one-hot format.
 
 Preprocessing on 1 images:
+<table style="width:100%">
+  <tr>
+    <th>Original Image</th>
+    <th>Grayscale</th>
+    <th>Normalized</th>
+  </tr>
+  <tr>
+    <td><img src="./examples/n_1.png" width="150" height="150"/></td>
+    <td><img src="./examples/g_1.png" width="150" height="150"/></td>
+    <td><img src="./examples/n_11.png" width="150" height="150"/></td>
+  </tr>
+</table>
 
-<img src="./examples/n_1.png" width="150" height="150"/> 
-<img src="./examples/g_1.png" width="150" height="150"/>
-<img src="./examples/n_11.png" width="150" height="150"/>
 
 After preprocessing step, images are ready to train the model, but in order to make model even more independent from the data, I added noise to 500 random images and appended them to the training set, which in result increase the size of training set to 35299 which improved my model accuracy on 7 web-sample images
 
 Here are 2 examples of extra images with added noise:
-
-| original                                                   | noise                                                       |
-| ---------------------------------------------------------- | ----------------------------------------------------------- |
-| <img src="./examples/noise1.png" width="150" height="150"/>|<img src="./examples/noise1_1.png" width="150" height="150"/>|
-| <img src="./examples/noise2.png" width="150" height="150"/>|<img src="./examples/noise2_2.png" width="150" height="150"/>|
+<table style="width:100%">
+  <tr>
+    <th>Original</th>
+    <th>With Noise</th>
+  </tr>
+  <tr>
+    <td><img src="./examples/noise1.png" width="150" height="150"/></td>
+    <td><img src="./examples/noise1_1.png" width="150" height="150"/></td>
+  </tr>
+   <tr>
+    <td><img src="./examples/noise2.png" width="150" height="150"/></td>
+    <td><img src="./examples/noise2_2.png" width="150" height="150"/></td>
+  </tr>
+</table>
 
 Network used for this exercise consists of 6 layers similar to LeNet structure, input, 4 hidden layers and output:
 
@@ -92,7 +110,7 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im0_barchart.png" width="170" height="120"/><br/>
+    	<img src="./examples/im0_barchart.png" width="200" height="120"/><br/>
     	1,Speed limit(30km/h) [Predicted: Correct]
     </td>
     <td>
@@ -105,7 +123,7 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im1_barchart.png" width="170" height="120"/><br/>12,Priority road [Predicted: Correct]
+    	<img src="./examples/im1_barchart.png" width="200" height="120"/><br/>12,Priority road [Predicted: Correct]
     </td>
     <td>
     <ul>
@@ -117,7 +135,7 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im2_barchart.png" width="170" height="120"/><br/>14,Stop [Predicted: Correct]
+    	<img src="./examples/im2_barchart.png" width="200" height="120"/><br/>14,Stop [Predicted: Correct]
     </td>
     <td>
     <ul>
@@ -129,7 +147,7 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    <img src="./examples/im3_barchart.png" width="170" height="120"/><br/>
+    <img src="./examples/im3_barchart.png" width="200" height="120"/><br/>
      25,Road work [Predicted: Correct]
     </td>
     <td>
@@ -142,7 +160,7 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im4_barchart.png" width="170" height="120"/><br/>
+    	<img src="./examples/im4_barchart.png" width="200" height="120"/><br/>
      23,Slippery road [Predicted: Incorrect Actual Sign: 31,Wild animals crossing]
     </td>
     <td>
@@ -155,7 +173,7 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im5_barchart.png" width="170" height="120"/><br/>
+    	<img src="./examples/im5_barchart.png" width="200" height="120"/><br/>
      11,Right-of-way at the nex..<br/>[Predicted: Incorrect Actual Sign: 23,Slippery road]
     </td>
     <td>
@@ -168,7 +186,7 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im6_barchart.png" width="170" height="120"/><br/>
+    	<img src="./examples/im6_barchart.png" width="200" height="120"/><br/>
      18,General caution<br/>[Predicted: Incorrect Actual Sign: 21,Double curve]
     </td>
     <td>
