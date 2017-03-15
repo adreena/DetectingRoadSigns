@@ -20,7 +20,7 @@ Dataset in this expermient consists of 32x32 images with 3 channels and 43 label
  * Testing data size: 12630
  * Note: after adding noise to training set , its size increases to 35299
  
-I visualized training-set based on the frequency of signs to get a better undesrtanding of how well data is distrubuted and if the number of images (for each sign) in the data has a direct impact on the accuracy of model to predict labels.
+I visualized training-set based on the frequency of signs to get a better undesrtanding of how well data is distrubuted and if the number of images (for each sign) in the set has a direct impact on the accuracy of model to predict labels.
 
 <img src="./examples/training_freq.png" width="850" height="280"/>
 
