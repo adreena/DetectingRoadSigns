@@ -58,12 +58,18 @@ After preprocessing step, images are ready to train the model, but in order to m
 Here are 2 examples of extra images with added noise:
 <table style="width:100%">
   <tr>
-    <th>Original</th>
+    <th>Normalized</th>
     <th>With Noise</th>
   </tr>
   <tr>
     <td><img src="./examples/noise1.png" width="150" height="150"/></td>
     <td><img src="./examples/noise1_1.png" width="150" height="150"/></td>
+  </tr>
+</table>
+<table style="width:100%">
+  <tr>
+    <th>Normalized</th>
+    <th>With Noise</th>
   </tr>
    <tr>
     <td><img src="./examples/noise2.png" width="150" height="150"/></td>
@@ -110,7 +116,7 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im0_barchart.png" width="200" height="120"/><br/>
+    	<img src="./examples/im0_barchart.png" width="180" height="150"/><br/>
     	1,Speed limit(30km/h) [Predicted: Correct]
     </td>
     <td>
@@ -123,7 +129,7 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im1_barchart.png" width="200" height="120"/><br/>12,Priority road [Predicted: Correct]
+    	<img src="./examples/im1_barchart.png" width="180" height="150"/><br/>12,Priority road<br/> [Predicted: Correct]
     </td>
     <td>
     <ul>
@@ -135,7 +141,7 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im2_barchart.png" width="200" height="120"/><br/>14,Stop [Predicted: Correct]
+    <img src="./examples/im2_barchart.png" width="180" height="150"/><br/>14,Stop<br/>[Predicted: Correct]
     </td>
     <td>
     <ul>
@@ -147,8 +153,8 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    <img src="./examples/im3_barchart.png" width="200" height="120"/><br/>
-     25,Road work [Predicted: Correct]
+    <img src="./examples/im3_barchart.png" width="180" height="150"/><br/>
+     25,Road work<br/> [Predicted: Correct]
     </td>
     <td>
     <ul>
@@ -160,8 +166,8 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im4_barchart.png" width="200" height="120"/><br/>
-     23,Slippery road [Predicted: Incorrect Actual Sign: 31,Wild animals crossing]
+    	<img src="./examples/im4_barchart.png" width="180" height="150"/><br/>
+     23,Slippery road<br/> [Predicted: Incorrect] Actual Sign: 31,Wild animals crossing
     </td>
     <td>
     	<ul>
@@ -173,8 +179,8 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im5_barchart.png" width="200" height="120"/><br/>
-     11,Right-of-way at the nex..<br/>[Predicted: Incorrect Actual Sign: 23,Slippery road]
+    	<img src="./examples/im5_barchart.png" width="180" height="150"/><br/>
+     11,Right-of-way at the nex..<br/>[Predicted: Incorrect] Actual Sign: 23,Slippery road
     </td>
     <td>
     <ul>
@@ -186,8 +192,8 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im6_barchart.png" width="200" height="120"/><br/>
-     18,General caution<br/>[Predicted: Incorrect Actual Sign: 21,Double curve]
+    	<img src="./examples/im6_barchart.png" width="180" height="150"/><br/>
+     18,General caution<br/>[Predicted: Incorrect] Actual Sign: 21,Double curve
     </td>
     <td>
     <ul>
