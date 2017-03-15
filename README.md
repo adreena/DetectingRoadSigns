@@ -132,9 +132,11 @@ Overall accuracy shows `0.571`, model performs very well on the first 4 images b
     </td>
     <td>
     <ul>
-    	<li>probablity: 97.95446014404297 , sign: 1,Speed limit (30km/h)</li>
-     <li>probablity: 0.615595817565918 , sign: 4,Speed limit (70km/h)</li>
-     <li>probablity: 0.5799821615219116 , sign: 0,Speed limit (20km/h)</li>
+     <li>probablity: 99.619384765625 , sign: 1,Speed limit (30km/h)</li>
+     <li>probablity: 0.30610108375549316 , sign: 0,Speed limit (20km/h)</li>
+     <li>probablity: 0.038351334631443024 , sign: 40,Roundabout mandatory</li>
+     <li>probablity: 0.011021287180483341 , sign: 28,Children crossing</li>
+     <li>probablity: 0.00678263371810317 , sign: 4,Speed limit (70km/h)</li>
      </ul>
     </td>
   </tr>
@@ -145,8 +147,10 @@ Overall accuracy shows `0.571`, model performs very well on the first 4 images b
     <td>
     <ul>
        <li>probablity: 100.0 , sign: 12,Priority road</li>
-       <li>probablity: 2.082616455610628e-25 , sign: 40,Roundabout mandatory</li>
-       <li>probablity: 7.620977317941738e-32 , sign: 15,No vehicles</li>
+       <li>probablity: 4.700046076777653e-07 , sign: 40,Roundabout mandatory</li>
+       <li>probablity: 1.1679628618421756e-11 , sign: 42,End of no passing by vehicles over 3.5 metric tons</li>
+       <li>probablity: 4.077430260833806e-15 , sign: 7,Speed limit (100km/h)</li>
+       <li>probablity: 4.875464999067405e-16 , sign: 1,Speed limit (30km/h)</li>
      </ul>
     </td>
   </tr>
@@ -156,9 +160,11 @@ Overall accuracy shows `0.571`, model performs very well on the first 4 images b
     </td>
     <td>
     <ul>
-    	<li>probablity: 99.99974060058594 , sign: 14 Stop</li>
-     <li>probablity: 0.00011504661233630031 , sign: 12,Priority road</li>
-     <li>probablity: 7.005963561823592e-05 , sign: 33,Turn right ahead</li> 
+     <li>probablity: 99.99876403808594 , sign: 14,Stop</li>
+     <li>probablity: 0.001188850961625576 , sign: 38,Keep right</li>
+     <li>probablity: 5.336221875040792e-05 , sign: 34,Turn left ahead</li>
+     <li>probablity: 6.982488116591412e-07 , sign: 17,No entry</li>
+     <li>probablity: 4.4473472371464595e-07 , sign: 13,Yield</li>
      </ul>
     </td>
   </tr>
@@ -169,9 +175,11 @@ Overall accuracy shows `0.571`, model performs very well on the first 4 images b
     </td>
     <td>
     <ul>
-     <li>probablity: 94.52849578857422 , sign: 25,Road work</li>
-     <li>probablity: 5.44403076171875 , sign: 22,Bumpy road</li>
-     <li>probablity: 0.01412796694785 , sign: 31,Wild animals crossing</li>
+      <li>probablity: 80.46527862548828 , sign: 25,Road work</li>
+      <li>probablity: 12.754717826843262 , sign: 31,Wild animals crossing</li>
+      <li>probablity: 6.550268173217773 , sign: 21,Double curve</li>
+      <li>probablity: 0.13391906023025513 , sign: 22,Bumpy road</li>
+      <li>probablity: 0.04608609527349472 , sign: 20,Dangerous curve to the right</li>
     </ul>
     </td>
   </tr>
@@ -182,9 +190,11 @@ Overall accuracy shows `0.571`, model performs very well on the first 4 images b
     </td>
     <td>
     	<ul>
-      <li>probablity: 99.63726043701172 , sign: 23,Slippery road</li>
-      <li>probablity: 0.2470851391553 , sign: 10,No passing for vehicles ..</li>
-      <li>probablity: 0.08363259583711624 , sign: 31,Wild animals crossing</li>
+       <li>probablity: 100.0 , sign: 23,Slippery road</li>
+       <li>probablity: 9.123946256295312e-07 , sign: 31,Wild animals crossing</li>
+       <li>probablity: 8.476145012537017e-07 , sign: 20,Dangerous curve to the right</li>
+       <li>probablity: 1.1697153468048782e-07 , sign: 30,Beware of ice/snow</li>
+       <li>probablity: 3.1184420379304356e-08 , sign: 19,Dangerous curve to the left</li>
      </ul>
     </td>
   </tr>
@@ -195,9 +205,11 @@ Overall accuracy shows `0.571`, model performs very well on the first 4 images b
     </td>
     <td>
     <ul>
-     <li>probablity: 86.93489074707031 , sign: 11,Right-of-way at the ...</li>
-     <li>probablity: 2.6319382190704346 , sign: 30,Beware of ice/snow</li>
-     <li>probablity: 2.462770700454712 , sign: 37,Go straight or left</li>
+      <li>probablity: 87.93341064453125 , sign: 11,Right-of-way at the next intersection</li>
+      <li>probablity: 11.897724151611328 , sign: 31,Wild animals crossing</li>
+      <li>probablity: 0.08555130660533905 , sign: 21,Double curve</li>
+      <li>probablity: 0.04106033593416214 , sign: 30,Beware of ice/snow</li>
+      <li>probablity: 0.019457001239061356 , sign: 37,Go straight or left</li>
      </ul>
     </td>
   </tr>
@@ -208,9 +220,11 @@ Overall accuracy shows `0.571`, model performs very well on the first 4 images b
     </td>
     <td>
     <ul>
-    	<li>probablity: 71.21922302246094 , sign: 18,General caution</li>
-     <li>probablity: 12.32940673828125 , sign: 12,Priority road</li>
-     <li>probablity: 11.075485229492188 , sign: 26,Traffic signals </li>
+     <li>probablity: 82.82020568847656 , sign: 18,General caution</li>
+     <li>probablity: 8.873628616333008 , sign: 25,Road work</li>
+     <li>probablity: 6.7343974113464355 , sign: 20,Dangerous curve to the right</li>
+     <li>probablity: 0.5950281023979187 , sign: 26,Traffic signals</li>
+     <li>probablity: 0.4056157171726227 , sign: 38,Keep right</li>
      </ul>
     </td>
   </tr>
