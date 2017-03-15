@@ -84,7 +84,7 @@ Network used for this exercise consists of 6 layers similar to LeNet structure, 
 Similar to previous layer, after passing thorugh filters biases are added and data gets actiavted with relu to ((3)).<br/>
 Pooling method used in this layer is max_pool with kernel size of 2 to reduce the size of output to 5x5x16. 
 </li>
-<li><b>f1 layer:</b> 
+<li><b>f1 layer:</b><br/>
 it is a fully connected layer with 120 nodes, in order to pass outputs of conv2 layer to this layer, it should be reshaped to a flat array 400x1. Weights connecting conv2 to f1 are 400x120 and 120 biases are added to the output.<br/>
 Regularization method used in this layer is drop_out of 50% to prevent model from overfitting.
 </li>
@@ -218,7 +218,7 @@ Overall accuracy shows `0.571`, model performs very well on the first 4 images b
   </tr>
 </table>
 
-###Precision & Recall
+### Precision & Recall
 To investigate these failures, I found 3 samples of training set for the failed images with their number of occurences in the set:
 <table>
 <tr>
@@ -227,9 +227,9 @@ To investigate these failures, I found 3 samples of training set for the failed 
 <th></th>
 </tr>
 <tr>
-<td><img src="./examples/incorrect_1.png" width="250" height="150"/></td>
-<td><img src="./examples/incorrect_2.png" width="250" height="150"/></td>
-<td><img src="./examples/incorrect_3.png" width="250" height="150"/></td>
+<td><img src="./examples/incorrect_1.png" width="150" height="150"/></td>
+<td><img src="./examples/incorrect_2.png" width="150" height="150"/></td>
+<td><img src="./examples/incorrect_3.png" width="150" height="150"/></td>
 </tr>
 <tr>
 <td>270</td>
@@ -240,13 +240,13 @@ To investigate these failures, I found 3 samples of training set for the failed 
 Looking at the images brigns up a very clear point that these signs look very similar to each other and their number of samples is relateivly fewer than sign#1 or sign#25 with occurences of `1350` & `1980` to get a better insight on precision of the model, I plotted the precision and recall for each sign based on test set:
 * precision: TP /(TP+FP)
 * recall: TP/(TP+FN)
-<img src="./examples/pr.png" width="250" height="150"/>
+<img src="./examples/pr.png" width="750" height="280"/>
 
 
 
-###Test validation
+### Test validation
 Overall accuracy for test set: `0.944`
 
 - feature map
-<img src="./examples/feature_map1.png" width="250" height="150"/>
-<img src="./examples/feature_map2.png" width="250" height="150"/>
+<img src="./examples/feature_map1.png" width="150" height="150"/>
+<img src="./examples/feature_map2.png" width="300" height="300"/>
