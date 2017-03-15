@@ -74,12 +74,12 @@ Network used for this exercise consists of 6 layers similar to LeNet structure, 
 <li><b>input layer:</b><br/> 32x32x1 images connect with 5x5x1x6 weights to 1st hidden layer</li>
 <li><b>conv1 layer:</b><br/>
   first convolutional layer with filter size of 5x5x1, depth of 6 and stride of 1.<br/> 
-  After passing thorugh filters biases are added and data gets actiavted with relu to add non-linearlity to the model<br/>
+  After passing thorugh filters, biases are added and data gets actiavted with relu to add non-linearlity to the model<br/>
   Pooling method used in this layer is max_pool with kernel size of 2 to reduce the size of output to 10x10x6. 
 </li>
 <li><b>conv2 layer:</b><br/>
 2nd convolutional layer with filter size of 5x5x6, depth of 16 and stride of 1.<br/>
-Similar to previous layer, after passing thorugh filters biases are added and data gets actiavted with relu<br/>
+Similar to previous layer, after passing thorugh filters, biases are added and data gets actiavted with relu<br/>
 Pooling method used in this layer is max_pool with kernel size of 2 to reduce the size of output to 5x5x16. 
 </li>
 <li><b>f1 layer:</b><br/>
@@ -94,7 +94,7 @@ f2 is another fully connected layer with 84 nodes, connected with 120x84 weights
 is the final layer with 43 nodes, 84x43 weights and 43 biases, which classifies the results into 43 categories of signs.
 </li></ul>
  
-I started training with 10 epochs but the accuracy wasn't below 90%, considering that learning-reat is 0.001 and 50% of data in f1 & f2 layers are dropping in each iteration, I increased epochs to 30 and achieved higher accuracy. Optimizer used in this network is Adamoptimzer which minimizes model's cost (cross-entropy) that is the distance of predicted-labels from target-labels.<br/>
+I started training with 10 epochs but the accuracy was below 90%, considering that learning-reat is 0.001 and 50% of data in f1 & f2 layers are dropping in each iteration, I increased epochs to 30 and achieved higher accuracy. Optimizer used in this network is Adamoptimzer which minimizes model's cost (cross-entropy) that is the distance of predicted-labels from target-labels.<br/>
 Final training configuration:
  - Optimizer: Adamoptimizer
  - learning-rate : 0.001
@@ -111,7 +111,7 @@ For measuring accuracy of each epoch, validation-set is passed to the model and 
   </tr>
   <tr>
     <td>Accuracy</td>
-    <td>1</td><td>2</td><td>3</td><td>4</td><td>...</td><td>28</td><td>29</td><td>30</td>
+    <td>0.572</td><td>0.807</td><td>0.852</td><td>0.874</td><td>...</td><td>0.948</td><td>0.958</td><td>0.954</td>
   </tr>
 </table>
 
@@ -231,8 +231,8 @@ To investigate these failures, I found 3 samples of training set for the failed 
 </tr>
 <tr>
 <td>#occurrences : 270</td>
-<td>occurrences : 690</td>
-<td>occurrences : 450</td>
+<td>#occurrences : 690</td>
+<td>#occurrences : 450</td>
 </tr>
 </table>
 
