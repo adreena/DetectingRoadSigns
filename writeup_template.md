@@ -240,13 +240,13 @@ To investigate these failures, I found 3 samples of training set for the failed 
 Looking at the images brigns up a very clear point that these signs look very similar to each other and their number of samples is relateivly fewer than sign#1 or sign#25 with occurences of `1350` & `1980` to get a better insight on precision of the model, I plotted the precision and recall for each sign based on test set:
 * precision: TP /(TP+FP)
 * recall: TP/(TP+FN)
-<img src="./examples/pr.png" width="750" height="280"/>
+<img src="./examples/pr.png" width="850" height="280"/>
 
 
 
 ### Test validation
 Overall accuracy for test set: `0.944`
 
-- feature map
+### Feature map
 <img src="./examples/feature_map1.png" width="150" height="150"/>
-<img src="./examples/feature_map2.png" width="300" height="300"/>
+<img src="./examples/feature_map2.png" width="700" height="500"/>
