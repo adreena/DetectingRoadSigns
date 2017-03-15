@@ -24,7 +24,7 @@ Dataset in this expermient consists of 32x32 images with 3 channels and 43 label
  
 I visualized training-set based on the frequency of signs to get a better undesrtanding of how well data is distrubuted and if the number of images (for each sign) in the data has a direct impact on the accuracy of model to predict labels.
 
-<img src="./examples/training_freq.png" width="750" height="280"/>
+<img src="./examples/training_freq.png" width="850" height="280"/>
 
 As shown above, some of the signs such as [0-Speed limit (20km/h)] , [19-Dangerous curve to the left] or [37-Go straight or left] have very few samples in comparison to other signs with frequecy higher than 1200 such as [1-Speed limit (30km/h)]; and depending on image qualities this might affect the model accuracy on predicting signs with fewer samples in training set.
 
@@ -222,9 +222,9 @@ Overall accuracy shows `0.571`, model performs very well on the first 4 images b
 To investigate these failures, I found 3 samples of training set for the failed images with their number of occurences in the set:
 <table>
 <tr>
-<th></th>
-<th></th>
-<th></th>
+<th>21,Double curve</th>
+<th>31,Wild animals crossing</th>
+<th>23,Slippery road</th>
 </tr>
 <tr>
 <td><img src="./examples/incorrect_1.png" width="150" height="150"/></td>
@@ -232,21 +232,26 @@ To investigate these failures, I found 3 samples of training set for the failed 
 <td><img src="./examples/incorrect_3.png" width="150" height="150"/></td>
 </tr>
 <tr>
-<td>270</td>
-<td>690</td>
-<td>450</td>
+<td>#occurrences : 270</td>
+<td>occurrences : 690</td>
+<td>occurrences : 450</td>
 </tr>
 </table>
 Looking at the images brigns up a very clear point that these signs look very similar to each other and their number of samples is relateivly fewer than sign#1 or sign#25 with occurences of `1350` & `1980` to get a better insight on precision of the model, I plotted the precision and recall for each sign based on test set:
-* precision: TP /(TP+FP)
-* recall: TP/(TP+FN)
+
+ * precision: TP /(TP+FP)
+ * recall: TP/(TP+FN)
+ 
 <img src="./examples/pr.png" width="850" height="280"/>
-
-
+Sign `28` is predicted as `18`,and diagram shows `28`precision is low. But for sign 23 (predicted as 11) and sign 31 (predicted as 23) precisions and recalls are both high and I can't calim they're the reason why model is not performing good on these cases, so there might be other factors causing the failures such as noise or very similar sign shapes.
 
 ### Test validation
 Overall accuracy for test set: `0.944`
 
 ### Feature map
+Feature map depicted below is the result of sample image sign (1,Speed limit 30km/h) through `conv1` [Feature-maps 0-5] and `conv2` [Feature-maps 0-15] layers.<br/>
+One of the most interesting charactersitics in these feature maps is the figure-contours detected by network. `conv1` layer is focusing on the shape of 30 is and the circle around the sign.
+As `conv1` output is max-pooled to a smaller pixel scale there are less pixels in `conv2` feature maps and it's more detailing on colors and orientations/locations of the colors.
+
 <img src="./examples/feature_map1.png" width="150" height="150"/>
 <img src="./examples/feature_map2.png" width="700" height="500"/>
