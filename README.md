@@ -235,12 +235,14 @@ To investigate these failures, I found 3 samples of training set for the failed 
 <td>occurrences : 450</td>
 </tr>
 </table>
-Looking at the images brigns up a very clear point that these signs look very similar to each other and their number of samples is relateivly fewer than sign#1 or sign#25 with occurences of `1350` & `1980` to get a better insight on precision of the model, I plotted the precision and recall for each sign based on test set:
+
+Looking at the images brigns up a very clear point that these signs look very similar to each other and their number of samples is relateivly fewer than sign1 or sign25 with occurences of `1350` & `1980` to get a better insight on precision of the model, I plotted the precision and recall for each sign based on test set:
 
  * precision: TP /(TP+FP)
  * recall: TP/(TP+FN)
  
 <img src="./examples/pr.png" width="850" height="280"/>
+
 Sign `28` is predicted as `18`,and diagram shows `28`precision is low. But for sign 23 (predicted as 11) and sign 31 (predicted as 23) precisions and recalls are both high and I can't calim they're the reason why model is not performing good on these cases, so there might be other factors causing the failures such as noise or very similar sign shapes.
 
 ### Test validation
