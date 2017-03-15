@@ -250,8 +250,8 @@ Overall accuracy for test set: `0.944`
 
 ### Feature map
 Feature map depicted below is the result of sample image sign (1,Speed limit 30km/h) through `conv1` [Feature-maps 0-5] and `conv2` [Feature-maps 0-15] layers.<br/>
-One of the most interesting charactersitics in these feature maps is the figure-contours detected by network. `conv1` layer is focusing on the shape of 30 is and the circle around the sign.
-As `conv1` output is max-pooled to a smaller pixel scale there are less pixels in `conv2`, so looks like its feature maps are more detailing out colors and orientations/locations of the colors.
+One of the most interesting charactersitics in these feature maps is the figure-contours detected by network. `conv1` layer is focusing on the shape of 30 and the circle around the sign.
+Output of `conv1` is max-pooled to a smaller pixel scale there are less pixels in `conv2`, so looks like its feature maps are more detailing out colors and orientations/locations of the colors.
 
 <img src="./examples/feature_map1.png" width="150" height="150"/>
 <img src="./examples/feature_map2.png" width="700" height="500"/>
