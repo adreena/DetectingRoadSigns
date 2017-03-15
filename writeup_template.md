@@ -90,12 +90,16 @@ Final training configuration:
 
 ### Evaluation
 For measuring accuracy of each epoch, validation-set is passed to the model and the average number of correctly predicted labels is printed out, some of the iterations results:
-
-| Epoch         | Accuracy      |
-| ------------- |:-------------:|
-| 0             | 0.572         |
-| 15            | 0.933         |
-| 29            | 0.954         |
+<table style="width:100%">
+  <tr>
+    <td>Epoch</td>
+    <td>1</td><td>2</td><td>3</td><td>4</td><td>...</td><td>28</td><td>29</td><td>30</td>
+  </tr>
+  <tr>
+    <td>Accuracy</td>
+    <td>1</td><td>2</td><td>3</td><td>4</td><td>...</td><td>28</td><td>29</td><td>30</td>
+  </tr>
+</table>
 
 ### Testing model on new images
 
