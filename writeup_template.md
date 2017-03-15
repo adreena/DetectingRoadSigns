@@ -218,7 +218,35 @@ Overall accuracy shows `0.571`, model performs very well on the first 4 images b
   </tr>
 </table>
 
-- further investigate on sample images
-- precision & recal diagram
-- test validation
+###Precision & Recall
+To investigate these failures, I found 3 samples of training set for the failed images with their number of occurences in the set:
+<table>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+<tr>
+<td><img src="./examples/incorrect_1.png" width="250" height="150"/></td>
+<td><img src="./examples/incorrect_2.png" width="250" height="150"/></td>
+<td><img src="./examples/incorrect_3.png" width="250" height="150"/></td>
+</tr>
+<tr>
+<td>270</td>
+<td>690</td>
+<td>450</td>
+</tr>
+</table>
+Looking at the images brigns up a very clear point that these signs look very similar to each other and their number of samples is relateivly fewer than sign#1 or sign#25 with occurences of `1350` & `1980` to get a better insight on precision of the model, I plotted the precision and recall for each sign based on test set:
+* precision: TP /(TP+FP)
+* recall: TP/(TP+FN)
+<img src="./examples/pr.png" width="250" height="150"/>
+
+
+
+###Test validation
+Overall accuracy for test set: `0.944`
+
 - feature map
+<img src="./examples/feature_map1.png" width="250" height="150"/>
+<img src="./examples/feature_map2.png" width="250" height="150"/>
