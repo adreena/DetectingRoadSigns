@@ -1,4 +1,4 @@
-#**Traffic Sign Recognition** 
+**Traffic Sign Recognition** 
 
 **Build a Traffic Sign Recognition Project**
 
@@ -114,7 +114,7 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im0_barchart.png" width="180" height="150"/><br/>
+    	<img src="./examples/im0_barchart.png"  width="250" height="150"/><br/>
     	1,Speed limit(30km/h) [Predicted: Correct]
     </td>
     <td>
@@ -127,7 +127,7 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im1_barchart.png" width="180" height="150"/><br/>12,Priority road<br/> [Predicted: Correct]
+    	<img src="./examples/im1_barchart.png"  width="250" height="150"/><br/>12,Priority road<br/> [Predicted: Correct]
     </td>
     <td>
     <ul>
@@ -139,7 +139,7 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    <img src="./examples/im2_barchart.png" width="180" height="150"/><br/>14,Stop<br/>[Predicted: Correct]
+    <img src="./examples/im2_barchart.png"  width="250" height="150"/><br/>14,Stop<br/>[Predicted: Correct]
     </td>
     <td>
     <ul>
@@ -151,7 +151,7 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    <img src="./examples/im3_barchart.png" width="180" height="150"/><br/>
+    <img src="./examples/im3_barchart.png"  width="250" height="150"/><br/>
      25,Road work<br/> [Predicted: Correct]
     </td>
     <td>
@@ -164,7 +164,7 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im4_barchart.png" width="180" height="150"/><br/>
+    	<img src="./examples/im4_barchart.png"  width="250" height="150"/><br/>
      23,Slippery road<br/> [Predicted: Incorrect] Actual Sign: 31,Wild animals crossing
     </td>
     <td>
@@ -177,7 +177,7 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im5_barchart.png" width="180" height="150"/><br/>
+    	<img src="./examples/im5_barchart.png"  width="250" height="150"/><br/>
      11,Right-of-way at the nex..<br/>[Predicted: Incorrect] Actual Sign: 23,Slippery road
     </td>
     <td>
@@ -190,7 +190,7 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im6_barchart.png" width="180" height="150"/><br/>
+    	<img src="./examples/im6_barchart.png" width="250" height="150"/><br/>
      18,General caution<br/>[Predicted: Incorrect] Actual Sign: 21,Double curve
     </td>
     <td>
