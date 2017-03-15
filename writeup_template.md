@@ -92,13 +92,15 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im0_barchart.png" width="170" height="120"/>
+    	<img src="./examples/im0_barchart.png" width="170" height="120"/><br/>
     	1,Speed limit(30km/h) [Predicted: Correct]
     </td>
     <td>
-    	probablity: 97.95446014404297 , sign: 1,Speed limit (30km/h)<br/>
-     probablity: 0.615595817565918 , sign: 4,Speed limit (70km/h)<br/>
-     probablity: 0.5799821615219116 , sign: 0,Speed limit (20km/h)
+    <ul>
+    	<li>probablity: 97.95446014404297 , sign: 1,Speed limit (30km/h)</li>
+     <li>probablity: 0.615595817565918 , sign: 4,Speed limit (70km/h)</li>
+     <li>probablity: 0.5799821615219116 , sign: 0,Speed limit (20km/h)</li>
+     </ul>
     </td>
   </tr>
   <tr>
@@ -106,9 +108,11 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
     	<img src="./examples/im1_barchart.png" width="170" height="120"/><br/>12,Priority road [Predicted: Correct]
     </td>
     <td>
-        probablity: 100.0 , sign: 12,Priority road<br/>
-        probablity: 2.082616455610628e-25 , sign: 40,Roundabout mandatory<br/>
-        probablity: 7.620977317941738e-32 , sign: 15,No vehicles
+    <ul>
+       <li>probablity: 100.0 , sign: 12,Priority road</li>
+       <li>probablity: 2.082616455610628e-25 , sign: 40,Roundabout mandatory</li>
+       <li>probablity: 7.620977317941738e-32 , sign: 15,No vehicles</li>
+     </ul>
     </td>
   </tr>
   <tr>
@@ -116,53 +120,63 @@ overall accuracy shows 0.571, model performs very well on the first 4 images but
     	<img src="./examples/im2_barchart.png" width="170" height="120"/><br/>14,Stop [Predicted: Correct]
     </td>
     <td>
-    	probablity: 99.99974060058594 , sign: 14 Stop<br/>
-     probablity: 0.00011504661233630031 , sign: 12,Priority road<br/>
-     probablity: 7.005963561823592e-05 , sign: 33,Turn right ahead 
+    <ul>
+    	<li>probablity: 99.99974060058594 , sign: 14 Stop</li>
+     <li>probablity: 0.00011504661233630031 , sign: 12,Priority road</li>
+     <li>probablity: 7.005963561823592e-05 , sign: 33,Turn right ahead</li> 
+     </ul>
     </td>
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im3_barchart.png" width="170" height="120"/>
+    <img src="./examples/im3_barchart.png" width="170" height="120"/><br/>
      25,Road work [Predicted: Correct]
     </td>
     <td>
-    probablity: 94.52849578857422 , sign: 25,Road work<br/>
-    probablity: 5.44403076171875 , sign: 22,Bumpy road<br/>
-    probablity: 0.01412796694785 , sign: 31,Wild animals crossing 
+    <ul>
+     <li>probablity: 94.52849578857422 , sign: 25,Road work</li>
+     <li>probablity: 5.44403076171875 , sign: 22,Bumpy road</li>
+     <li>probablity: 0.01412796694785 , sign: 31,Wild animals crossing</li>
+    </ul>
     </td>
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im4_barchart.png" width="170" height="120"/>
+    	<img src="./examples/im4_barchart.png" width="170" height="120"/><br/>
      23,Slippery road [Predicted: Incorrect Actual Sign: 31,Wild animals crossing]
     </td>
     <td>
-    	probablity: 99.63726043701172 , sign: 23,Slippery road<br/>
-     probablity: 0.2470851391553 , sign: 10,No passing for vehicles ..<br/>
-     probablity: 0.08363259583711624 , sign: 31,Wild animals crossing
+    	<ul>
+      <li>probablity: 99.63726043701172 , sign: 23,Slippery road</li>
+      <li>probablity: 0.2470851391553 , sign: 10,No passing for vehicles ..</li>
+      <li>probablity: 0.08363259583711624 , sign: 31,Wild animals crossing</li>
+     </ul>
     </td>
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im5_barchart.png" width="170" height="120"/>
+    	<img src="./examples/im5_barchart.png" width="170" height="120"/><br/>
      11,Right-of-way at the nex..<br/>[Predicted: Incorrect Actual Sign: 23,Slippery road]
     </td>
     <td>
-    	probablity: 86.93489074707031 , sign: 11,Right-of-way at the ...<br/>
-     probablity: 2.6319382190704346 , sign: 30,Beware of ice/snow<br/>
-     probablity: 2.462770700454712 , sign: 37,Go straight or left
+    <ul>
+     <li>probablity: 86.93489074707031 , sign: 11,Right-of-way at the ...</li>
+     <li>probablity: 2.6319382190704346 , sign: 30,Beware of ice/snow</li>
+     <li>probablity: 2.462770700454712 , sign: 37,Go straight or left</li>
+     </ul>
     </td>
   </tr>
   <tr>
     <td>
-    	<img src="./examples/im6_barchart.png" width="170" height="120"/>
+    	<img src="./examples/im6_barchart.png" width="170" height="120"/><br/>
      18,General caution<br/>[Predicted: Incorrect Actual Sign: 21,Double curve]
     </td>
     <td>
-    	probablity: 71.21922302246094 , sign: 18,General caution<br/>
-     probablity: 12.32940673828125 , sign: 12,Priority road<br/>
-     probablity: 11.075485229492188 , sign: 26,Traffic signals 
+    <ul>
+    	<li>probablity: 71.21922302246094 , sign: 18,General caution</li>
+     <li>probablity: 12.32940673828125 , sign: 12,Priority road</li>
+     <li>probablity: 11.075485229492188 , sign: 26,Traffic signals </li>
+     </ul>
     </td>
   </tr>
 </table>
