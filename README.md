@@ -22,7 +22,7 @@ Dataset in this expermient consists of 32x32 images with 3 channels and 43 label
  
 I visualized training-set based on the frequency of signs to get a better undesrtanding of how well data is distrubuted and if the number of images (for each sign) in the set has a direct impact on the accuracy of model to predict labels.
 
-<img src="./examples/training_freq.png" width="850" height="280"/>
+<img src="./examples/Screenshot\ 2017-04-04 18.54.54.png" width="850" height="280"/>
 
 As shown above, some of the signs such as [0-Speed limit (20km/h)] , [19-Dangerous curve to the left] or [37-Go straight or left] have very few samples in comparison to other signs with frequecy higher than 1200 such as [1-Speed limit (30km/h)]; and depending on image qualities this might affect the model accuracy on predicting signs with fewer samples in training set.
 
